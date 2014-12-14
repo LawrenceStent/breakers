@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This application&apos;s purpose is to show a number of Cape Town&apos;s surf spots. On selection of a particular
+spot the user then goes into a new activity which shows that spots wave information, in minimum to maximum
+wave height and the wind direction where the wave is. This allows the surfer to know whether the wave is
+good to surf or not. In the new activity that is opened the user can then downloads and see&apos;s the latest user uploaded 
+photos of that spot. The user can take a photo and then upload their own photo to the database along with a description 
+of the wave as they see it. From there the user can retake the photo if they are unhappy or click upload, which opens
+a dialog to add a description. "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>

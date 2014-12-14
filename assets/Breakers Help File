@@ -1,0 +1,56 @@
+Breakers Surf Application Help File
+
+===================================
+
+This application's purpose is to show a number of Cape Town's surf spots. On selection of a particular
+spot the user then goes into a new activity which shows that spots wave information, in minimum to maximum
+wave height and the wind direction where the wave is. This allows the surfer to know whether the wave is
+good to surf or not. In the new activity that is opened the user can then downloads and see's the latest user uploaded 
+photos of that spot. The user can take a photo and then upload their own photo to the database along with a description 
+of the wave as they see it. From there the user can retake the photo if they are unhappy or click upload, which opens
+a dialog to add a description. 
+
+The online database that I use is from Parse.com. This is a free server which allows for nosql storage of information.
+I imported a library that my app uses. This library adds functionality in my IDE for Parse calls. These calls allow 
+for upload and download of data as well as setting of users (although I have not yet implemented individual user functionality).
+
+The mainActivity opens up a map of Cape Town with pins located at various surf spots. This covers Location based services.
+I use async tasks twice, both in the creation of the breakInfo class which is developing Android threads. One is to perform 
+the download of images and description from Parse.com, the other is to pull the surf api information from magicseaweed. These
+two task cover network and socket programming, web services as well as database and file storage. 
+
+Of the required technologies my app uses:
+> Database or file storage of records;
+> Networking and socket programming;
+> Web services;
+> Location based services (GPS);
+> Developing Android Services and threads.
+
+A problem I encountered while using the surf api, is that the api does not cover the amount of surf spots that I have
+and wish to have in my application. Although this is a problem now and as such some surf spots will not have corresponding
+api information. This can be countered in the future by taking ocean weather data and converting it for the desried spot.
+Many of the surf spots have not been populated with photos. 
+
+==============================================================================================================================
+
+Hierarchy of classes
+--------------------
+MainActivity -> breakInfoClass ->CustomListAdapter -> ImageLoader ->MemoryCache
+							   ->CameraClass					  ->FileCache
+							   ->SurfInfo						  ->Utils
+
+==============================================================================================================================
+
+There is much that I feel I still need to develop and have assigned space within my applications code to expand:
+
+>Named User integration - so far each user is anonymous, will add facebook login so that the user can see their friends
+
+>Full weather forecast 	- will add a button to the action bar so that the surfer can view a much more detailed weather
+						  forecast for the spot that they are looking at. For a surfer this can be vital information.
+
+>LiftClub feature		- This is a feature which I am going to take from a previous assignment whereby if one person
+						  is going to a beach they make a notification and anyone else wanting to go can get picked up
+						  and also go surfing.
+						  
+>Photo display & comments - On click of each photo, it will go into the photo to view it, which will then have a comments 
+							section where different users can comment on one photo.					  

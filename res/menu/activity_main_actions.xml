@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/ic_action_camera"
+          android:icon="@drawable/ic_action_camera"
+          android:orderInCategory="100"
+          android:showAsAction="always"
+          android:title="Camera"/>
+    <item
+        android:id="@+id/info_text"
+        android:icon="@drawable/msw_powered_by"
+        android:orderInCategory="100"
+        android:title="info"
+        android:showAsAction="ifRoom|withText"/>
+
+</menu>
